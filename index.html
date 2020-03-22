@@ -19,9 +19,7 @@
         </style>
 </head>
     <body>
-			<audio autoplay="autopaly" loop = "loop">
-					<source src="https://webfs.yun.kugou.com/201908012259/fb3da23fcc89a3c319f45df9de47b66d/G011/M09/1A/17/q4YBAFUKi0yANhHNADdWM81Jqik946.mp3" type="audio/mp3" />
-			</audio>
+        <audio id="aduio" src="How.mp3"></audio>
         <div id="main">
             <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
             <div id="wrap">
@@ -115,6 +113,11 @@
 
         canvas.click(function(e) {
             var offset = canvas.offset(), x, y;
+	    var aduio = document.getElementById("aduio");
+	    aduio.src="How.mp3";
+	    aduio.loop=true;
+	    aduio.play();
+		
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
             if (seed.hover(x, y)) {
